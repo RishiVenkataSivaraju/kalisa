@@ -136,15 +136,20 @@ h1 {
   color: red;
 }
 
+.navbars {
+  padding-bottom: 3px;
+  /* border: 1px groove rgb(40, 39, 39) ; */
+}
+
 .govindha {
-  margin-left: -25px;
+  margin-left: 45%;
 }
 
 /* css animation */
 .kalisa {
   font-size: 9vw;
   font-weight: 400;
-  color: #333;
+  color: #000;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1.2s ease-out forwards;
@@ -174,11 +179,12 @@ h1 {
   font-size: 3vw;
   margin-left: 32px;
   animation: fadeInUp 1.2s ease-out forwards;
+  color: #000;
 
 }
 
 .title {
-  margin-top: 50px;
+  margin-top: 4%;
   margin-left: 40px;
 }
 
@@ -194,7 +200,7 @@ h1 {
   /* background-color: black; */
   display: inline-block;
   margin-left: 2%;
-  transform: translate(53vw, -33vh);
+  transform: translate(53vw, -35vh);
   border: none;
   outline: none;
   box-shadow: none;
@@ -206,18 +212,21 @@ h1 {
   border: none;
   outline: none;
   box-shadow: none;
+  border-radius: 5%;
   /* background-color: white; */
 }
 
 .pic2 {
-  width: 300px;
+  width: 295px;
+  margin-left: 5px;
   height: 250px;
+  border-radius: 5%;
 }
 
 .pic3 {
   width: 300px;
   height: 250px;
-
+  border-radius: 5%;
 }
 
 img {
@@ -227,10 +236,28 @@ img {
 }
 
 .pic4 {
-  border: none;
   outline: none;
   box-shadow: none;
   /* background-color: white; */
   width: 300px;
   height: 250px;
+  border-radius: 5%;
+}
+
+.booking {
+  padding: 1% 5% 1% 5%;
+  font-weight: bold;
+  font-size: medium;
+  color: white;
+  background-color: rgb(42, 177, 231);
+  border-radius: 2rem;
+  margin-left: 30px;
+}
+
+.book {
+  padding-top: 5%;
+}
+
+.booking:hover {
+  text-decoration: none;
 }
