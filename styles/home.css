@@ -142,8 +142,28 @@ h1 {
 }
 
 .govindha {
-  margin-left: 45%;
+  width: 150px;
+  margin-right: 2vw;
 }
+
+.nav-item {
+  font-size: 1.7vw;
+  font-weight: 500;
+  margin: 0px 10px;
+  margin-top: 5px;
+}
+
+/* #li1 {
+  margin-right: 7vw;
+}
+
+#li2 {
+  margin-right: 4vw;
+}
+
+#li3 {
+  margin-left: 5vw;
+} */
 
 /* css animation */
 .kalisa {
