@@ -153,6 +153,12 @@ h1 {
   margin-top: 5px;
 }
 
+.nav-item:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
 /* #li1 {
   margin-right: 7vw;
 }
@@ -220,7 +226,7 @@ h1 {
   /* background-color: black; */
   display: inline-block;
   margin-left: 2%;
-  transform: translate(53vw, -35vh);
+  transform: translate(53vw, -40vh);
   border: none;
   outline: none;
   box-shadow: none;
@@ -236,6 +242,12 @@ h1 {
   /* background-color: white; */
 }
 
+.pic1:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
 .pic2 {
   width: 295px;
   margin-left: 5px;
@@ -247,6 +259,12 @@ h1 {
   width: 300px;
   height: 250px;
   border-radius: 5%;
+}
+
+.pic4:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-out;
+  cursor: pointer;
 }
 
 img {
@@ -278,6 +296,25 @@ img {
   padding-top: 5%;
 }
 
+/* .book:hover {
+  transform: translateY(-0.2vw);
+  transition: 0.3s ease-in-out;
+} */
+
 .booking:hover {
+  box-shadow: 7px 5px 56px -14px #5af6f3;
+  color: rgb(42, 177, 231);
+  background-color: white;
+  border: 2px solid rgb(42, 177, 231);
   text-decoration: none;
+}
+
+.booking:active {
+  padding: 1% 5% 1% 5%;
+  font-weight: bold;
+  font-size: medium;
+  color: white;
+  background-color: rgb(42, 177, 231);
+  border-radius: 2rem;
+  margin-left: 30px;
 }
