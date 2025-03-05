@@ -106,7 +106,9 @@ body {
   line-height: 1;
   /* font-family: "Roboto Condensed", sans-serif; */
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(135deg, #dadac7 , #e0e3de );
+  /* background: linear-gradient(135deg, #0F2027, #203A43, #2C5364); */
+  /* background: linear-gradient(135deg, #2C003E, #5A0E50, #8E44AD); */
+  background: linear-gradient(135deg, #000428, #004e92);
 }
 
 ol,
@@ -175,7 +177,7 @@ h1 {
 .kalisa {
   font-size: 9vw;
   font-weight: 400;
-  color: #000;
+  color: #fff;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 1.2s ease-out forwards;
@@ -205,12 +207,12 @@ h1 {
   font-size: 3vw;
   margin-left: 32px;
   animation: fadeInUp 1.2s ease-out forwards;
-  color: #000;
+  color: #fff;
 
 }
 
 .title {
-  margin-top: 4%;
+  margin-top: 8%;
   margin-left: 40px;
 }
 
@@ -226,11 +228,42 @@ h1 {
   /* background-color: black; */
   display: inline-block;
   margin-left: 2%;
-  transform: translate(53vw, -40vh);
+  transform: translate(53vw, -45vh);
   border: none;
   outline: none;
   box-shadow: none;
 }
+
+/* .pics img {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+    transition: transform 0.3s ease-out; 
+}
+
+
+.pic1 { animation-delay: 0.1s; }
+.pic2 { animation-delay: 0.3s; }
+.pic3 { animation-delay: 0.5s; }
+.pic4 { animation-delay: 0.7s; }
+ */
+
+/* @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+
+/* .pics img:hover {
+    transform: scale(1.1) !important;
+    transition: all 0.3s ease-out !important; 
+} */
 
 .pic1 {
   width: 300px;
