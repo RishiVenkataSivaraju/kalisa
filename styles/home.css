@@ -106,11 +106,7 @@ body {
   line-height: 1;
   /* font-family: "Roboto Condensed", sans-serif; */
   font-family: "Roboto", sans-serif;
-  /* background: linear-gradient(135deg, #FFC371, #FF5F6D); */
-  /* background: linear-gradient(135deg, #8E0E00, #FFB88C); */
-  /* background: linear-gradient(135deg, #FF7E5F, #FEB47B); */
-  /* background: linear-gradient(135deg, #D2B48C, #5E2129); */
-  background: linear-gradient(135deg, #E9C3A8, #5C1D1D);
+  background: linear-gradient(135deg, #dadac7 , #e0e3de );
 }
 
 ol,
