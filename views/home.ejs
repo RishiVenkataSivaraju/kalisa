@@ -66,7 +66,24 @@
 
         </div>
     </div>
+    <div class="square"></div>
+    </div>
+    <div class="second">
+        
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const square = document.querySelector(".square");
 
+            for (let i = 0; i < 20; i++) { // Create 20 moving neon lines
+                let line = document.createElement("div");
+                line.classList.add("line");
+                line.style.left = `${i * 15}px`; // Evenly space the lines
+                line.style.animationDelay = `${i * 0.1}s`; // Add delay for staggered effect
+                square.appendChild(line);
+            }
+        });
+    </script>
 </body>
 
 </html>
