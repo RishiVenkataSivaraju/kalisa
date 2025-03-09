@@ -70,17 +70,24 @@
     <div class="square"></div>
     </div>
     <div class="second">
-    <div class="features">
-        <p class="service">We Provide</p>
-        <ul  class="bullets" type="disk">
-            <li>Free Wifi</li>
-            <li>Free Parking</li>
-            <li>24Hr Front Desk</li>
-            <li></li>
-            <li></li>
-        </ul>
+        <div class="features">
+            <p class="service">Amenities</p>
+            <ul class="bullets" type="disk">
+                <li class="amenity">Free Wi-Fi</li>
+                <li class="amenity">Parking</li>
+                <li class="amenity">Swimming Pool</li>
+                <li class="amenity">Spa & Wellness</li>
+                <li class="amenity">Restaurant</li>
+            </ul>
+        </div>
+        <!-- <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741505171/hotel_2_anazcs.png"
+                alt="Decorative Icon" class="icon"> -->
+
+        <!-- <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741506398/hotel_4_icjanc.png"
+            alt="Decorative Icon" class="icon"> -->
+        <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741506597/bed_jmn4iz.png" alt="Decorative Icon"
+            class="icon">
     </div>
-</div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const square = document.querySelector(".square");
@@ -93,7 +100,29 @@
                 square.appendChild(line);
             }
         });
+        document.addEventListener("DOMContentLoaded", function () {
+            const amenities = document.querySelectorAll(".amenity");
+            const observerOptions = {
+                threshold: 0.2
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add("show");
+                        }, index * 100);
+                    }
+                });
+            }, observerOptions);
+
+            amenities.forEach((amenity) => {
+                observer.observe(amenity);
+            });
+        });
     </script>
+    <a href="https://www.flaticon.com/free-icons/architecture-and-city" title="architecture and city icons">Architecture
+        and city icons created by Satria Arnata - Flaticon</a>
 </body>
 
 </html>
