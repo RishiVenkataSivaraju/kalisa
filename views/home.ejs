@@ -88,15 +88,22 @@
         <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741506597/bed_jmn4iz.png" alt="Decorative Icon"
             class="icon">
     </div>
+    <footer class="footer">
+        <p class="fhead">Contact us </p>
+        <p>Revanth Reddy</p>
+        <p>Cell : 9121470674 , 6301288894</p>
+        <p> Address : Bank colony Beside Rahul Convention Tirupati By-pass , Tiruchanur AP-517503</p>
+
+    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const square = document.querySelector(".square");
 
-            for (let i = 0; i < 20; i++) { // Create 20 moving neon lines
+            for (let i = 0; i < 20; i++) {
                 let line = document.createElement("div");
                 line.classList.add("line");
-                line.style.left = `${i * 15}px`; // Evenly space the lines
-                line.style.animationDelay = `${i * 0.1}s`; // Add delay for staggered effect
+                line.style.left = `${i * 15}px`;
+                line.style.animationDelay = `${i * 0.1}s`;
                 square.appendChild(line);
             }
         });
@@ -121,8 +128,8 @@
             });
         });
     </script>
-    <a href="https://www.flaticon.com/free-icons/architecture-and-city" title="architecture and city icons">Architecture
-        and city icons created by Satria Arnata - Flaticon</a>
+    <!-- <a href="https://www.flaticon.com/free-icons/architecture-and-city" title="architecture and city icons">Architecture
+        and city icons created by Satria Arnata - Flaticon</a> -->
 </body>
 
 </html>
