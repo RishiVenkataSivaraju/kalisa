@@ -40,8 +40,11 @@
                             <a class="nav-link" href="https://www.google.com/maps?q=13.6092710494995,79.4410095214844"
                                 target="_blank" id="li2" style="color: #fff !important;">Location</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="scrollButton">
                             <a class="nav-link" href="#" id="li3" style="color: #fff !important;">Contact</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a class="nav-link" href="/landmarks"  style="color: #fff !important;">Landmarks</a>
                         </li>
                     </ul>
                 </div>
@@ -88,7 +91,7 @@
         <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741506597/bed_jmn4iz.png" alt="Decorative Icon"
             class="icon">
     </div>
-    <footer class="footer">
+    <footer class="footer" id="bottom">
         <p class="fhead">Contact us </p>
         <p>Revanth Reddy</p>
         <p>Cell : 9121470674 , 6301288894</p>
@@ -126,6 +129,9 @@
             amenities.forEach((amenity) => {
                 observer.observe(amenity);
             });
+        });
+        document.getElementById("scrollButton").addEventListener("click", function () {
+            document.getElementById("bottom").scrollIntoView({ behavior: "smooth" });
         });
     </script>
     <!-- <a href="https://www.flaticon.com/free-icons/architecture-and-city" title="architecture and city icons">Architecture
