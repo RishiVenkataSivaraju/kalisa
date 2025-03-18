@@ -14,6 +14,10 @@ app.get("/landmarks",(req,res)=>{
  res.render("landmarks");
 })
 
+app.get("/book",(req,res)=>{
+ res.render("booking");
+})
+
 app.listen(3000, () => {
 console.log("Listeninig on port 3000");
 })
