@@ -24,7 +24,39 @@
 </head>
 
 <body>
-    <h1>Hello</h1>
+    <div class="bookingform">
+        <form action="/bookroom" method="post">
+            <label for="fromDate">From Date:</label><br>
+            <input type="date" id="fromDate" name="fromDate"><br>
+            <label for="toDate">To Date:</label><br>
+            <input type="date" id="toDate" name="toDate"><br>
+            <input type="gmail" placeholder="Enter Gmail" name="gmail"><br>
+            <input type="tel" placeholder="Phone Number" name="phonenumber"><br>
+            <div class="details">
+                <p>See Room Details</p>
+                <p>Per Day Cost:- ₹2400 + Taxes</p>
+                <p>5 People max for room(Extra Charges For More People)</p>
+            </div>
+            <button>Book</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('fromDate').addEventListener('change', function () {
+            let fromDate = new Date(this.value);
+            if (!isNaN(fromDate.getTime())) {
+                let nextDay = new Date(fromDate);
+                nextDay.setDate(fromDate.getDate() + 1); // Set to next day
+
+                let nextDayStr = nextDay.toISOString().split('T')[0]; // Format to YYYY-MM-DD
+                let toDate = document.getElementById('toDate');
+
+                toDate.min = nextDayStr; // Set min date
+                if (toDate.value && toDate.value < nextDayStr) {
+                    toDate.value = nextDayStr; // Reset if invalid
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
