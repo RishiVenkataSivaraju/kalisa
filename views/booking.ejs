@@ -48,14 +48,14 @@
             let fromDate = new Date(this.value);
             if (!isNaN(fromDate.getTime())) {
                 let nextDay = new Date(fromDate);
-                nextDay.setDate(fromDate.getDate() + 1); // Set to next day
+                nextDay.setDate(fromDate.getDate() + 1);
 
-                let nextDayStr = nextDay.toISOString().split('T')[0]; // Format to YYYY-MM-DD
+                let nextDayStr = nextDay.toISOString().split('T')[0];
                 let toDate = document.getElementById('toDate');
 
-                toDate.min = nextDayStr; // Set min date
+                toDate.min = nextDayStr; 
                 if (toDate.value && toDate.value < nextDayStr) {
-                    toDate.value = nextDayStr; // Reset if invalid
+                    toDate.value = nextDayStr; 
                 }
             }
         });
