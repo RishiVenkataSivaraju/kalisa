@@ -6,7 +6,9 @@ const userDetails = new Schema({
 fromDate:String,
 toDate:String,
 gmail:String,
-phonenumber:Number
+phonenumber:Number,
+noOfRooms:Number,
+people:Number
 })
  
 const USERDETAILS = mongoose.model("USERDETAILS",userDetails);
