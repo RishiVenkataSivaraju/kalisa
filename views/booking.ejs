@@ -24,40 +24,86 @@
 </head>
 
 <body>
+    <div class="navbars" style="background-color: transparent !important; box-shadow: none !important;">
+        <nav class="navbar navbar-expand-lg bg-transparent"> <!-- Changed bg-body-tertiary to bg-transparent -->
+            <div class="container-fluid">
+                <!-- <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741141131/download-removebg-preview_1_xdnx2r.png" alt=""
+                    class="govindha"> -->
+                <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741169690/undefined_-_Imgur-removebg-preview_zhs2ke.png"
+                    alt="" class="govindha">
+                <div class="collapse navbar-collapse" id="navbarNav" style="color: #fff;">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/" id="li1" style="color: #fff !important;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.google.com/maps?q=13.6092710494995,79.4410095214844"
+                                target="_blank" id="li2" style="color: #fff !important;">Location</a>
+                        </li>
+                        <!-- <li class="nav-item" id="scrollButton">
+                            <a class="nav-link" href="#" id="li3" style="color: #fff !important;">Contact</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/landmarks" style="color: #fff !important;">Landmarks</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
     <div class="bookingform">
         <form action="/bookroom" method="post">
-            <label for="fromDate">From Date:</label><br>
-            <input type="date" id="fromDate" name="fromDate"><br>
-            <label for="toDate">To Date:</label><br>
-            <input type="date" id="toDate" name="toDate"><br>
+            <label for="fromDate">From Date</label><br>
+            <input type="date" id="fromDate" name="fromDate" required><br>
+            <label for="toDate">To Date</label><br>
+            <input type="date" id="toDate" name="toDate" required><br>
             <input type="gmail" placeholder="Enter Gmail" name="gmail"><br>
-            <input type="tel" placeholder="Phone Number" name="phonenumber"><br>
+            <input type="tel" placeholder="Phone Number" name="phonenumber" required><br>
             <div class="details">
                 <p>See Room Details</p>
-                <p>Per Day Cost:- ₹2400 + Taxes</p>
-                <p>5 People max for room(Extra Charges For More People)</p>
+                <p>Per Day Cost:- ₹2400</p>
+                <p>5 People max For Base Price(Extra Charges For More People)</p>
             </div>
-            <input type="number" placeholder="How many rooom needed?" name="noOfRooms" min="1">
-            <input type="number" placeholder="For how many people?" name="people" min="1">
+            <input type="number" placeholder="How many rooom(s)?" name="noOfRooms" min="1" required>
+            <input type="number" placeholder="For how many people?" name="people" min="1" required><br>
 
             <button>Book</button>
         </form>
     </div>
     <script>
-        document.getElementById('fromDate').addEventListener('change', function () {
-            let fromDate = new Date(this.value);
-            if (!isNaN(fromDate.getTime())) {
-                let nextDay = new Date(fromDate);
-                nextDay.setDate(fromDate.getDate() + 1);
+        document.addEventListener("DOMContentLoaded", function () {
+            let today = new Date().toISOString().split("T")[0];
 
-                let nextDayStr = nextDay.toISOString().split('T')[0];
-                let toDate = document.getElementById('toDate');
+            let fromDate = document.getElementById("fromDate");
+            let toDate = document.getElementById("toDate");
 
-                toDate.min = nextDayStr; 
-                if (toDate.value && toDate.value < nextDayStr) {
-                    toDate.value = nextDayStr; 
+            // Set the default min value for "From Date"
+            fromDate.min = today;
+            fromDate.value = today;
+
+            // Set the initial min value for "To Date" (Next day)
+            let tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            let tomorrowStr = tomorrow.toISOString().split("T")[0];
+
+            toDate.min = tomorrowStr;
+            toDate.value = tomorrowStr;
+
+            // Update "To Date" when "From Date" changes
+            fromDate.addEventListener('change', function () {
+                let fromDateValue = new Date(this.value);
+                if (!isNaN(fromDateValue.getTime())) {
+                    let nextDay = new Date(fromDateValue);
+                    nextDay.setDate(fromDateValue.getDate() + 1);
+
+                    let nextDayStr = nextDay.toISOString().split('T')[0];
+                    toDate.min = nextDayStr;
+
+                    if (toDate.value && toDate.value < nextDayStr) {
+                        toDate.value = nextDayStr;
+                    }
                 }
-            }
+            });
         });
     </script>
 </body>

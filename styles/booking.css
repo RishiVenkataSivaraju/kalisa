@@ -103,6 +103,9 @@ section {
 
 body {
     line-height: 1;
+    background: linear-gradient(135deg, #000428, #004e92);
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
 }
 
 ol,
@@ -130,11 +133,35 @@ table {
 
 .bookingform {
     margin-left: 35%;
-    margin-top: 10%;
+    margin-top: 5%;
     padding-left: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
     margin-right: 35%;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
+    color: white;
+}
+
+.navbars {
+    padding-bottom: 3px;
+    /* border: 1px groove rgb(40, 39, 39) ; */
+}
+
+.govindha {
+    width: 150px;
+    margin-right: 2vw;
+}
+
+.nav-item {
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin: 0px 10px;
+    margin-top: 5px;
+}
+
+.nav-item:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-out;
+    cursor: pointer;
 }
