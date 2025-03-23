@@ -3,6 +3,8 @@ const path =require("path");
 const app = express();
 const mongoose = require("mongoose");
 const USERDETAILS= require("./module/UserDetails");
+
+require("dotenv").config();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'styles')));
@@ -10,15 +12,9 @@ app.use(express.static(path.join(__dirname, 'module')));
 app.use(express.urlencoded({ extended: true }));
 
 
-// mongoose.connect('mongodb+srv://RISHI:rishi@userdetails.uqquc.mongodb.net/?retryWrites=true&w=majority&appName=USERDETAILS')
-//     .then(data => {
-//         console.log('CONNECTION OPEN')
-//     })
-//     .catch(err => {
-//         console.log(err)
-//     })
 
-mongoose.connect('mongodb+srv://RISHI:rishi@userdetails.uqquc.mongodb.net/?retryWrites=true&w=majority&appName=USERDETAILS')
+
+mongoose.connect(process.env.MONGODB_URL)
     .then(data => {
         console.log('CONNECTION OPEN')
     })

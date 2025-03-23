@@ -1,10 +1,13 @@
-const mongoose = require("mongoose");
-require('dotenv').config(); 
-const accountSid = process.env.accountSid
-const authToken = process.env.authToken;
-const client = new twilio(accountSid,authToken)
-const adminPhoneNumber = process.env.adminPhoneNumber; 
-const twilioWhatsAppNumber = process.env.twilioWhatsAppNumber;
+const mongoose = require("mongoose"); 
+const twilio= require("twilio");
+require('dotenv').config();
+
+const accountSid = process.env.ACCOUNT_SID;
+const authToken = process.env.AUTH_TOKEN;
+const adminPhoneNumber = process.env.ADMIN_PHONE_NUMBER;
+const twilioWhatsAppNumber = process.env.TWILIO_WHATSAPP_NUMBER;
+
+const client = new twilio(accountSid, authToken);
 const Schema = mongoose.Schema;
 const userDetails = new Schema({
     fromDate: String,
