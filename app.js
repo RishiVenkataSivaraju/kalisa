@@ -10,7 +10,15 @@ app.use(express.static(path.join(__dirname, 'module')));
 app.use(express.urlencoded({ extended: true }));
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/USERDETAILS')
+// mongoose.connect('mongodb+srv://RISHI:rishi@userdetails.uqquc.mongodb.net/?retryWrites=true&w=majority&appName=USERDETAILS')
+//     .then(data => {
+//         console.log('CONNECTION OPEN')
+//     })
+//     .catch(err => {
+//         console.log(err)
+//     })
+
+mongoose.connect('mongodb+srv://RISHI:rishi@userdetails.uqquc.mongodb.net/?retryWrites=true&w=majority&appName=USERDETAILS')
     .then(data => {
         console.log('CONNECTION OPEN')
     })
