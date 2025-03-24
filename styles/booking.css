@@ -133,10 +133,10 @@ table {
 
 .bookingform {
     margin-left: 35%;
-    margin-top: 5%;
+    /* margin-top: 3%; */
     padding-left: 5%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     margin-right: 35%;
     border: 1px solid white;
     border-radius: 5px;
@@ -164,4 +164,84 @@ table {
     transform: scale(1.1);
     transition: 0.2s ease-out;
     cursor: pointer;
+}
+
+input[type="date"] {
+    appearance: none;
+    /* Removes default styling in some browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+#fromDate {
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+#toDate {
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+#gmail {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 3% 6%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+#phonenumber {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 3% 6%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+#Rooms {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 3% 6%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+#people {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 3% 6%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    background: #f8f8f8;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    color: black;
+    margin-right: 6%;
+    margin-bottom: 2%
+}
+
+.details.open {
+    max-height: 150px;
+    /* Adjust as needed */
+    padding: 10px;
+}
+
+.toggle-details {
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
 }

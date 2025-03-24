@@ -53,24 +53,43 @@
     </div>
     <div class="bookingform">
         <form action="/bookroom" method="post">
-            <label for="fromDate">From Date</label><br>
+            <label for="fromDate">Check In</label><br>
             <input type="date" id="fromDate" name="fromDate" required><br>
-            <label for="toDate">To Date</label><br>
+            <label for="toDate">Check Out</label><br>
             <input type="date" id="toDate" name="toDate" required><br>
-            <input type="gmail" placeholder="Enter Gmail" name="gmail"><br>
-            <input type="tel" placeholder="Phone Number" name="phonenumber" required><br>
+            <label for="gmail">Enter Your Gmail or Phone Number</label><br>
+            <input type="text" placeholder=" Phone &#x1F4DE; | Gmail &#x1F4E7;" name="gmail" id="gmail" required><br>
+            <!-- <label for="phonenumber">Enter Your Phone Number</label><br>
+            <input type="tel" placeholder="Phone Number" name="phonenumber" id="phonenumber" required><br> -->
+            <p class="toggle-details">See Room Details ▼</p>
             <div class="details">
-                <p>See Room Details</p>
-                <p>Per Day Cost:- ₹2400</p>
-                <p>5 People max For Base Price(Extra Charges For More People)</p>
+                <p style="margin-bottom: 2%;">Per Day Cost: ₹2400/-</p>
+                <p>5 People max For Base Price (Extra Charges For More People)</p>
             </div>
-            <input type="number" placeholder="How many rooom(s)?" name="noOfRooms" min="1" required>
-            <input type="number" placeholder="For how many people?" name="people" min="1" required><br>
+
+
+            <label for="Rooms">No Of Rooms</label><br>
+            <input type="number" placeholder="How many rooom(s)?" name="noOfRooms" min="1" id="Rooms" required><br>
+            <label for="people">No Of People</label><br>
+            <input type="number" placeholder="For how many people?" name="people" min="1" required id="people"><br>
 
             <button>Book</button>
         </form>
     </div>
     <script>
+   <% if (typeof alertMessage !== "undefined") { %>
+            alert("<%= alertMessage %>");
+    <% } %>
+            document.querySelector(".toggle-details").addEventListener("click", function () {
+                const details = document.querySelector(".details");
+                details.classList.toggle("open");
+
+                // Change text to indicate open/close state
+                this.textContent = details.classList.contains("open")
+                    ? "Hide Room Details ▲"
+                    : "See Room Details ▼";
+            });
+
         document.addEventListener("DOMContentLoaded", function () {
             let today = new Date().toISOString().split("T")[0];
 

@@ -1,8 +1,8 @@
 const express = require("express");
-const path =require("path");
+const path = require("path");
 const app = express();
 const mongoose = require("mongoose");
-const USERDETAILS= require("./module/UserDetails");
+const USERDETAILS = require("./module/UserDetails");
 
 require("dotenv").config();
 app.set('view engine', 'ejs');
@@ -24,9 +24,18 @@ mongoose.connect(process.env.MONGODB_URL)
 
 app.post("/bookroom", async (req, res) => {
     try {
-        const { fromDate, toDate, gmail, phonenumber ,noOfRooms,people} = req.body;
-        console.log("Received Data:", req.body); 
-        const userDetail = new USERDETAILS({ fromDate, toDate, gmail, phonenumber ,noOfRooms,people});
+        let { fromDate, toDate, gmail, noOfRooms, people } = req.body;
+        console.log("Received Data:", req.body);
+        // Regex for validation
+        gmail=gmail.trim();
+        const phoneRegex = /^[6-9]\d{9}$/; // Phone: 10 digits, starts with 6-9
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Email format
+
+        // Check if it's valid
+         if (!phoneRegex.test(gmail) && !emailRegex.test(gmail)) {
+            return res.render("booking", { alertMessage: "Invalid phone number or email" });
+        }
+        const userDetail = new USERDETAILS({ fromDate, toDate, gmail, noOfRooms, people });
         await userDetail.save();
         res.render("BookingSuccessful");
     } catch (error) {
@@ -37,18 +46,18 @@ app.post("/bookroom", async (req, res) => {
 
 
 
-app.get("/",(req,res)=>{
- res.render("home");
+app.get("/", (req, res) => {
+    res.render("home");
 })
 
-app.get("/landmarks",(req,res)=>{
- res.render("landmarks");
+app.get("/landmarks", (req, res) => {
+    res.render("landmarks");
 })
 
-app.get("/book",(req,res)=>{
- res.render("booking");
+app.get("/book", (req, res) => {
+    res.render("booking");
 })
 
 app.listen(3000, () => {
-console.log("Listeninig on port 3000");
+    console.log("Listeninig on port 3000");
 })
