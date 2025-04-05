@@ -19,7 +19,7 @@ const userDetails = new Schema({
 })
 userDetails.post("save", async function (doc) {
     try {
-        const message = `📢 New Room Booking!\n\n🛏️ Dates: ${doc.fromDate} - ${doc.toDate}\n Email or Phone: ${doc.gmail}\n No of rooms : ${doc.noOfRooms} \n  People : ${doc.people}`;
+        const message = `📢 New Room Booking!\n\n🛏️ Dates: ${doc.fromDate} - ${doc.toDate}\nEmail or Phone: ${doc.gmail}\nNo of rooms : ${doc.noOfRooms} \nPeople : ${doc.people}`;
 
         await client.messages.create({
             from: twilioWhatsAppNumber,

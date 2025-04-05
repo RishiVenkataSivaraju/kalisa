@@ -245,3 +245,16 @@ input[type="date"] {
     color: #fff;
     margin-bottom: 5px;
 }
+
+button {
+    padding: 3% 12%;
+    border-radius: 25px;
+    margin-left: 18%;
+    margin-top: 20px;
+}
+
+button:hover {
+    border: 2px solid white;
+    color: white;
+    background-color: navy;
+}
