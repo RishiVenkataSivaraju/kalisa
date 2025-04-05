@@ -44,7 +44,8 @@ app.post("/bookroom", async (req, res) => {
     }
 });
 
-
+app.get("/bookroom",(req,res)=>{
+res.render("BookingSuccessful")})
 
 app.get("/", (req, res) => {
     res.render("home");
