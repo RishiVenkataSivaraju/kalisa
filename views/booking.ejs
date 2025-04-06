@@ -24,11 +24,11 @@
 </head>
 
 <body>
-    <div class="navbars" style="background-color: transparent !important; box-shadow: none !important;">
-        <nav class="navbar navbar-expand-lg bg-transparent"> <!-- Changed bg-body-tertiary to bg-transparent -->
+    <!-- <div class="navbars" style="background-color: transparent !important; box-shadow: none !important;">
+        <nav class="navbar navbar-expand-lg bg-transparent"> 
             <div class="container-fluid">
-                <!-- <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741141131/download-removebg-preview_1_xdnx2r.png" alt=""
-                    class="govindha"> -->
+                <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741141131/download-removebg-preview_1_xdnx2r.png" alt=""
+                    class="govindha">
                 <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741169690/undefined_-_Imgur-removebg-preview_zhs2ke.png"
                     alt="" class="govindha">
                 <div class="collapse navbar-collapse" id="navbarNav" style="color: #fff;">
@@ -40,9 +40,9 @@
                             <a class="nav-link" href="https://www.google.com/maps?q=13.6092710494995,79.4410095214844"
                                 target="_blank" id="li2" style="color: #fff !important;">Location</a>
                         </li>
-                        <!-- <li class="nav-item" id="scrollButton">
+                        <li class="nav-item" id="scrollButton">
                             <a class="nav-link" href="#" id="li3" style="color: #fff !important;">Contact</a>
-                        </li> -->
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/landmarks" style="color: #fff !important;">Landmarks</a>
                         </li>
@@ -50,7 +50,39 @@
                 </div>
             </div>
         </nav>
-    </div>
+    </div> -->
+<div class="navbars" style="background-color: transparent !important; box-shadow: none !important;">
+    <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741169690/undefined_-_Imgur-removebg-preview_zhs2ke.png"
+                alt="" class="govindha">
+
+            <!-- Toggler button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span> <!-- Makes it white -->
+            </button>
+
+            <!-- Navbar items -->
+            <div class="collapse navbar-collapse" id="navbarNav" style="color: #fff;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/" id="li1" style="color: #fff !important;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.google.com/maps?q=13.6092710494995,79.4410095214844"
+                            target="_blank" id="li2" style="color: #fff !important;">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/landmarks" style="color: #fff !important;">Landmarks</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
     <div class="bookingform">
         <form action="/bookroom" method="post">
             <label for="fromDate">Check In</label><br>
