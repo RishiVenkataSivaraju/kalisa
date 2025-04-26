@@ -517,3 +517,78 @@ body::-webkit-scrollbar {
     text-decoration: none;
   }
 }
+
+@media (max-width: 990px) {
+  .pics {
+    display: none;
+    /* padding-left: 30%;
+    padding-top: 5%; */
+  }
+
+  .pic3 {
+    margin-left: 27%;
+  }
+
+
+  .title {
+    padding-top: 3%;
+    margin-bottom: 60vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .kalisa {
+    font-size: 10vw;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+    margin-left: 6%;
+    margin-top: 20px;
+  }
+
+  .tagLine {
+    font-size: 4vw;
+    margin-left: 6.4%;
+    animation: fadeInUp 1.2s ease-out forwards;
+    color: #fff;
+
+  }
+
+  .title {
+    margin-top: 4%;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .kalisa {
+    font-size: 11vw;
+    font-weight: 400;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+    margin-left: 6%;
+    margin-top: 20px;
+  }
+
+  .tagLine {
+    font-size: 4vw;
+    margin-left: 6.4%;
+    animation: fadeInUp 1.2s ease-out forwards;
+    color: #fff;
+
+  }
+
+  .title {
+    margin-top: 4%;
+    margin-left: 40px;
+    margin-bottom: 120%;
+  }
+
+  .booking {
+    margin-left: 6%;
+  }
+}
