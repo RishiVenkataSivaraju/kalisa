@@ -638,7 +638,7 @@ body::-webkit-scrollbar {
     /* background-color: black; */
     display: inline-block;
     margin-left: 2%;
-    transform: translate(43vw, 5vw);
+    transform: translate(40vw, 10vw);
     border: none;
     outline: none;
     box-shadow: none;
