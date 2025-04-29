@@ -14,7 +14,12 @@ app.use(express.urlencoded({ extended: true }));
 
 
 
-mongoose.connect(process.env.MONGODB_URL)
+mongoose.connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 10000, 
+    socketTimeoutMS: 45000
+})
     .then(data => {
         console.log('CONNECTION OPEN')
     })
