@@ -30,8 +30,8 @@
                 <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741169690/undefined_-_Imgur-removebg-preview_zhs2ke.png"
                     alt="" class="govindha">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
-                    <span class="navbar-toggler-icon" style="filter: invert(1); " ></span></span> 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);  "></span></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav" style="color: #fff;">
                     <ul class="navbar-nav">
@@ -63,12 +63,13 @@
         </div>
         <div class="pics">
             <img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1740983463/images_nagtei.jpg" alt=""
-                class="pic1"><img src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741081985/images_zgvxnj.jpg"
-                style="outline: none;" class="pic2">
-            <img class="pic3"
+                class="pic1 room-img"><img
+                src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741081985/images_zgvxnj.jpg"
+                style="outline: none;" class="pic2 room-img">
+            <img class="pic3 room-img"
                 src="https://res.cloudinary.com/drpgvnojt/image/upload/v1741081967/download_irixcg.jpg"><img
                 src="https://res.cloudinary.com/drpgvnojt/image/upload/v1740983441/download_c4kiyn.jpg" alt=""
-                class="pic4">
+                class="pic4 room-img">
 
         </div>
     </div>
@@ -102,6 +103,11 @@
 
     </footer>
     <script>
+        document.querySelectorAll('.room-img').forEach(img => {
+            img.addEventListener('click', () => {
+                window.location.href = "/rooms"; // Instantly hits app.get("/rooms")
+            });
+        });
         document.addEventListener("DOMContentLoaded", function () {
             const square = document.querySelector(".square");
 

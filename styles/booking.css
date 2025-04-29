@@ -338,3 +338,7 @@ button:hover {
         width: 100px;
     }
 }
+  .navbar-toggler-icon {
+    color: black !important;
+    background-color: black;
+  }

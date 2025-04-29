@@ -27,12 +27,12 @@ app.post("/bookroom", async (req, res) => {
         let { fromDate, toDate, gmail, noOfRooms, people } = req.body;
         console.log("Received Data:", req.body);
         // Regex for validation
-        gmail=gmail.trim();
+        gmail = gmail.trim();
         const phoneRegex = /^[6-9]\d{9}$/; // Phone: 10 digits, starts with 6-9
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Email format
 
         // Check if it's valid
-         if (!phoneRegex.test(gmail) && !emailRegex.test(gmail)) {
+        if (!phoneRegex.test(gmail) && !emailRegex.test(gmail)) {
             return res.render("booking", { alertMessage: "Invalid phone number or email" });
         }
         const userDetail = new USERDETAILS({ fromDate, toDate, gmail, noOfRooms, people });
@@ -44,9 +44,13 @@ app.post("/bookroom", async (req, res) => {
     }
 });
 
-app.get("/bookroom",(req,res)=>{
-res.render("BookingSuccessful")})
+app.get("/bookroom", (req, res) => {
+    res.render("BookingSuccessful")
+})
 
+app.get("/rooms", (req, res) => {
+    res.send("ROOM PICTURES")
+})
 app.get("/", (req, res) => {
     res.render("home");
 })
