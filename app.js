@@ -45,7 +45,7 @@ app.post("/bookroom", async (req, res) => {
         res.render("BookingSuccessful");
     } catch (error) {
         console.error("Error saving data:", error);
-        res.status(500).send("Error saving booking details");
+        res.render("bookingFailed")
     }
 });
 
