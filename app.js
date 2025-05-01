@@ -54,7 +54,7 @@ app.get("/bookroom", (req, res) => {
 })
 
 app.get("/rooms", (req, res) => {
-    res.send("ROOM PICTURES")
+    res.render("images")
 })
 app.get("/", (req, res) => {
     res.render("home");
